@@ -7,6 +7,7 @@ Este proyecto te permite acceder a diferentes secuencias de luces utilizando un 
 2. [Contraseña para el Menú Principal](#contraseña-para-el-menú-principal)
 3. [Menú](#menú)
 4. [Instrucciones de Uso](#instrucciones-de-uso)
+5. [Fallas conocidas](#fallas-conocidas)
 
 ## Especificaciones Técnicas
 Utilizamos la placa DE0-Nano FPGA Altera Cyclone IV. La placa está compuesta de 8 leds, dos botones (boton 0 y boton 1), y 4 dipswitches ([3][2][1][0]). El boton 0, fue destinado a resetear el sistema.
@@ -44,3 +45,7 @@ Led [3] encendido: Auto de policia.
 5. Finalmente, una vez en la secuencia, podemos cambiar la velocidad en la que se ejecutan estas. Para ello, deberá subirse el dipswitch[0] y 
 si se quiere subir la velocidad, deberá bajarse el dipswitch[1] y deberá pulsarse el boton 1. Por el contrario, si se quiere disminuir la velocidad,
 deberá subirse el dipswitch[1] y deberá pulsarse el boton 1, tantas veces como quiera aumentarse o disminuirse la velocidad.
+
+## Fallas Conocidas
+1. La secuencia: luces de la policia no funciona correctamente. Posible falla: Un branch que apunte a un lugar incorrecto o una operacion que no se este haciendo correctamente. 
+2. En la secuencia del auto fantastico, durante la vuelta un led se queda apagado de mas. Posible solucion: Modificar delays.
